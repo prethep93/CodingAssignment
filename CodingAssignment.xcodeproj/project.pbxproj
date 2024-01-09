@@ -21,6 +21,7 @@
 		0FC2E8F82B4DDA0F00B56FFF /* RegistrationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8F72B4DDA0F00B56FFF /* RegistrationErrorTests.swift */; };
 		0FC2E8FA2B4DDD1300B56FFF /* RegistrationInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8F92B4DDD1300B56FFF /* RegistrationInputValidator.swift */; };
 		0FC2E8FC2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8FB2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift */; };
+		0FC2E9002B4DE54500B56FFF /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8FF2B4DE54500B56FFF /* RegistrationViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		0FC2E8F72B4DDA0F00B56FFF /* RegistrationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorTests.swift; sourceTree = "<group>"; };
 		0FC2E8F92B4DDD1300B56FFF /* RegistrationInputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInputValidator.swift; sourceTree = "<group>"; };
 		0FC2E8FB2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInputValidatorTests.swift; sourceTree = "<group>"; };
+		0FC2E8FF2B4DE54500B56FFF /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				0FC2E8CE2B4DCF6600B56FFF /* UserProfileTests.swift */,
 				0FC2E8F72B4DDA0F00B56FFF /* RegistrationErrorTests.swift */,
 				0FC2E8FB2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift */,
+				0FC2E8FF2B4DE54500B56FFF /* RegistrationViewModelTests.swift */,
 			);
 			path = CodingAssignmentTests;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			files = (
 				0FC2E8CF2B4DCF6600B56FFF /* UserProfileTests.swift in Sources */,
 				0FC2E8FC2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift in Sources */,
+				0FC2E9002B4DE54500B56FFF /* RegistrationViewModelTests.swift in Sources */,
 				0FC2E8F82B4DDA0F00B56FFF /* RegistrationErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

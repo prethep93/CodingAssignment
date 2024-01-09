@@ -7,6 +7,10 @@
 
 import Foundation
 
+struct UserDefaultsKeys {
+    static let userProfile = "com.pp.CodingAssignment.registration.userProfile"
+}
+
 struct UserProfile: Codable, Hashable {
     var name: String
     var email: String

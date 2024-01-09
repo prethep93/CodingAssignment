@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegistrationView: View {
     @ObservedObject private var viewModel: RegistrationView.ViewModel
+    @State private var canShowConfirmation = false
 
     init(viewModel: RegistrationView.ViewModel) {
         self.viewModel = viewModel
@@ -30,12 +31,18 @@ struct RegistrationView: View {
                 }
                 Section {
                     Button("Registrieren") {
-                        viewModel.validateInputFields()
+                        if viewModel.validateInputFields() {
+                            viewModel.saveUserProfile()
+                            canShowConfirmation = true
+                        }
                     }
                 }
             }
             .navigationTitle("Registrierung")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(isPresented: $canShowConfirmation) {
+                Text("Confirmation")
+            }
         }
     }
 }
