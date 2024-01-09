@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CodingAssignmentApp: App {
+    @StateObject private var registrationViewModel = RegistrationView.ViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RegistrationView(viewModel: registrationViewModel)
         }
     }
 }
