@@ -22,6 +22,8 @@
 		0FC2E8FA2B4DDD1300B56FFF /* RegistrationInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8F92B4DDD1300B56FFF /* RegistrationInputValidator.swift */; };
 		0FC2E8FC2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8FB2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift */; };
 		0FC2E9002B4DE54500B56FFF /* RegistrationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8FF2B4DE54500B56FFF /* RegistrationViewModelTests.swift */; };
+		0FC2E9022B4DE84200B56FFF /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E9012B4DE84200B56FFF /* ConfirmationView.swift */; };
+		0FC2E9042B4DE8D000B56FFF /* AdaptiveRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E9032B4DE8D000B56FFF /* AdaptiveRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		0FC2E8F92B4DDD1300B56FFF /* RegistrationInputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInputValidator.swift; sourceTree = "<group>"; };
 		0FC2E8FB2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInputValidatorTests.swift; sourceTree = "<group>"; };
 		0FC2E8FF2B4DE54500B56FFF /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
+		0FC2E9012B4DE84200B56FFF /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
+		0FC2E9032B4DE8D000B56FFF /* AdaptiveRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				0FC2E8EF2B4DD4DD00B56FFF /* RegistrationView.swift */,
+				0FC2E9012B4DE84200B56FFF /* ConfirmationView.swift */,
+				0FC2E9032B4DE8D000B56FFF /* AdaptiveRow.swift */,
 				0FC2E8F32B4DD7D000B56FFF /* ErrorView.swift */,
 			);
 			path = Views;
@@ -308,8 +314,10 @@
 				0FC2E8F42B4DD7D000B56FFF /* ErrorView.swift in Sources */,
 				0FC2E8F02B4DD4DD00B56FFF /* RegistrationView.swift in Sources */,
 				0FC2E8F62B4DD85500B56FFF /* RegistrationError.swift in Sources */,
+				0FC2E9042B4DE8D000B56FFF /* AdaptiveRow.swift in Sources */,
 				0FC2E8FA2B4DDD1300B56FFF /* RegistrationInputValidator.swift in Sources */,
 				0FC2E8F22B4DD4F300B56FFF /* RegistrationViewModel.swift in Sources */,
+				0FC2E9022B4DE84200B56FFF /* ConfirmationView.swift in Sources */,
 				0FC2E8EC2B4DD3E100B56FFF /* UserProfile.swift in Sources */,
 				0FC2E8BE2B4DCF6300B56FFF /* CodingAssignmentApp.swift in Sources */,
 			);

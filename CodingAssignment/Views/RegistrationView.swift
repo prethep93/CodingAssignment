@@ -41,7 +41,7 @@ struct RegistrationView: View {
             .navigationTitle("Registrierung")
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(isPresented: $canShowConfirmation) {
-                Text("Confirmation")
+                ConfirmationView(userProfile: $viewModel.userProfile)
             }
         }
     }
