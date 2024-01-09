@@ -19,6 +19,8 @@
 		0FC2E8F42B4DD7D000B56FFF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8F32B4DD7D000B56FFF /* ErrorView.swift */; };
 		0FC2E8F62B4DD85500B56FFF /* RegistrationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8F52B4DD85500B56FFF /* RegistrationError.swift */; };
 		0FC2E8F82B4DDA0F00B56FFF /* RegistrationErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8F72B4DDA0F00B56FFF /* RegistrationErrorTests.swift */; };
+		0FC2E8FA2B4DDD1300B56FFF /* RegistrationInputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8F92B4DDD1300B56FFF /* RegistrationInputValidator.swift */; };
+		0FC2E8FC2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8FB2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		0FC2E8F32B4DD7D000B56FFF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		0FC2E8F52B4DD85500B56FFF /* RegistrationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationError.swift; sourceTree = "<group>"; };
 		0FC2E8F72B4DDA0F00B56FFF /* RegistrationErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorTests.swift; sourceTree = "<group>"; };
+		0FC2E8F92B4DDD1300B56FFF /* RegistrationInputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInputValidator.swift; sourceTree = "<group>"; };
+		0FC2E8FB2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInputValidatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 			children = (
 				0FC2E8CE2B4DCF6600B56FFF /* UserProfileTests.swift */,
 				0FC2E8F72B4DDA0F00B56FFF /* RegistrationErrorTests.swift */,
+				0FC2E8FB2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift */,
 			);
 			path = CodingAssignmentTests;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			children = (
 				0FC2E8EB2B4DD3E100B56FFF /* UserProfile.swift */,
 				0FC2E8F52B4DD85500B56FFF /* RegistrationError.swift */,
+				0FC2E8F92B4DDD1300B56FFF /* RegistrationInputValidator.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 				0FC2E8F42B4DD7D000B56FFF /* ErrorView.swift in Sources */,
 				0FC2E8F02B4DD4DD00B56FFF /* RegistrationView.swift in Sources */,
 				0FC2E8F62B4DD85500B56FFF /* RegistrationError.swift in Sources */,
+				0FC2E8FA2B4DDD1300B56FFF /* RegistrationInputValidator.swift in Sources */,
 				0FC2E8F22B4DD4F300B56FFF /* RegistrationViewModel.swift in Sources */,
 				0FC2E8EC2B4DD3E100B56FFF /* UserProfile.swift in Sources */,
 				0FC2E8BE2B4DCF6300B56FFF /* CodingAssignmentApp.swift in Sources */,
@@ -310,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FC2E8CF2B4DCF6600B56FFF /* UserProfileTests.swift in Sources */,
+				0FC2E8FC2B4DDDBD00B56FFF /* RegistrationInputValidatorTests.swift in Sources */,
 				0FC2E8F82B4DDA0F00B56FFF /* RegistrationErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

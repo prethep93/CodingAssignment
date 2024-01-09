@@ -11,20 +11,21 @@ extension RegistrationView {
     @MainActor
     final class ViewModel: ObservableObject {
         @Published var userProfile = UserProfile()
-        @Published var errorMessages: [String] = [
-            RegistrationError.nameTooShort.localizedMessage,
-            RegistrationError.emailInvalid.localizedMessage,
-            RegistrationError.dateOfBirthOutOfRange.localizedMessage
-        ]
+        @Published var errorMessages: [String] = []
 
-        private(set) var dateOfBirthRange: ClosedRange<Date> = {
-            let lowerBound = Calendar.current.date(from: DateComponents(year: 1900, month: 1, day: 1))!
-            let upperBound = Calendar.current.date(from: DateComponents(year: 2022, month: 12, day: 31, hour: 23, minute: 59, second: 59))!
-            return lowerBound...upperBound
-        }()
+        private let inputValidator: RegistrationInputValidator
+
+        init(inputValidator: RegistrationInputValidator = RegistrationInputValidator()) {
+            self.inputValidator = inputValidator
+        }
 
         func validateInputFields() {
-            
+            errorMessages.removeAll()
+            errorMessages = [
+                inputValidator.validateName(userProfile.name),
+                inputValidator.validateEmail(userProfile.email),
+                inputValidator.validateDateOfBirth(userProfile.dateOfBirth)
+            ].compactMap({ $0?.localizedMessage })
         }
 
         func saveUserData() {
