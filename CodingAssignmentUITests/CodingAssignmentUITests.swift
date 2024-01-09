@@ -8,34 +8,73 @@
 import XCTest
 
 final class CodingAssignmentUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testRegistrationFlow() throws {
         let app = XCUIApplication()
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        // Verify initial UI state
+        XCTAssert(app.navigationBars["Registrierung"].exists)
+        XCTAssert(app.textFields["Name"].exists)
+        XCTAssert(app.textFields["E-Mail"].exists)
+        XCTAssert(app.datePickers["Geburtsdatum"].exists)
+        XCTAssert(app.buttons["Registrieren"].exists)
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
+        // Enter valid data
+        app.textFields["Name"].tap()
+        app.textFields["Name"].typeText("John Doe")
+
+        app.textFields["E-Mail"].tap()
+        app.textFields["E-Mail"].typeText("john@example.com")
+
+        app.keyboards.buttons["Return"].tap()
+
+        // Set a valid date of birth
+        let dateOfBirthPicker = app.datePickers["Geburtsdatum"]
+        XCTAssert(dateOfBirthPicker.exists)
+        dateOfBirthPicker.buttons["Show year picker"].tap()
+        dateOfBirthPicker.pickerWheels["2024"].adjust(toPickerWheelValue: "2000")
+
+        // Tap the Register button
+        app.buttons["Registrieren"].tap()
+
+        // Wait for the ConfirmationView to appear
+        XCTAssert(app.navigationBars["Bestätigung"].waitForExistence(timeout: 5))
+
+        // Additional verifications based on the ConfirmationView
+        XCTAssert(app.staticTexts["Danke für die Registrierung"].exists)
+        XCTAssert(app.images["CHECKMARK_ICON"].firstMatch.exists)
+        XCTAssert(app.staticTexts["Name"].exists)
+        XCTAssert(app.staticTexts["John Doe"].exists)
+        XCTAssert(app.staticTexts["E-Mail"].exists)
+        XCTAssert(app.staticTexts["john@example.com"].exists)
+        XCTAssert(app.staticTexts["Date of birth"].exists)
+        XCTAssert(app.staticTexts["9.1.2000"].exists)
+
+        // Navigating back
+        app.navigationBars["Bestätigung"].buttons["Registrierung"].tap()
+
+        // Enter invalid data
+        let nameField = app.textFields["Name"]
+        nameField.tap()
+        nameField.clearText()
+        nameField.typeText(" ")
+        app.keyboards.buttons["Return"].tap()
+        app.buttons["Registrieren"].tap()
+        XCTAssert(app.staticTexts["Der Name muss mindestens ein Zeichen enthalten."].exists)
+    }
+}
+
+extension XCUIElement {
+    func clearText() {
+        guard let stringValue = self.value as? String else {
+            return
         }
+
+        // Tap to focus and select all text
+        tap()
+
+        // Replace the selected text with an empty string
+        let deleteString = String(repeating: XCUIKeyboardKey.delete.rawValue, count: stringValue.count)
+        typeText(deleteString)
     }
 }
