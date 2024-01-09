@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0FC2E8BE2B4DCF6300B56FFF /* CodingAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8BD2B4DCF6300B56FFF /* CodingAssignmentApp.swift */; };
-		0FC2E8C02B4DCF6300B56FFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8BF2B4DCF6300B56FFF /* ContentView.swift */; };
 		0FC2E8C22B4DCF6500B56FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC2E8C12B4DCF6500B56FFF /* Assets.xcassets */; };
 		0FC2E8C52B4DCF6500B56FFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FC2E8C42B4DCF6500B56FFF /* Preview Assets.xcassets */; };
 		0FC2E8CF2B4DCF6600B56FFF /* CodingAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC2E8CE2B4DCF6600B56FFF /* CodingAssignmentTests.swift */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		0FC2E8BA2B4DCF6300B56FFF /* CodingAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodingAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC2E8BD2B4DCF6300B56FFF /* CodingAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingAssignmentApp.swift; sourceTree = "<group>"; };
-		0FC2E8BF2B4DCF6300B56FFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0FC2E8C12B4DCF6500B56FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FC2E8C42B4DCF6500B56FFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0FC2E8CA2B4DCF6600B56FFF /* CodingAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodingAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,19 +93,12 @@
 			isa = PBXGroup;
 			children = (
 				0FC2E8BD2B4DCF6300B56FFF /* CodingAssignmentApp.swift */,
-				0FC2E8BF2B4DCF6300B56FFF /* ContentView.swift */,
-				0FC2E8C12B4DCF6500B56FFF /* Assets.xcassets */,
-				0FC2E8C32B4DCF6500B56FFF /* Preview Content */,
+				0FC2E8E72B4DCF9300B56FFF /* Models */,
+				0FC2E8E82B4DCF9900B56FFF /* Views */,
+				0FC2E8E92B4DCF9E00B56FFF /* ViewModels */,
+				0FC2E8EA2B4DD00900B56FFF /* Resources */,
 			);
 			path = CodingAssignment;
-			sourceTree = "<group>";
-		};
-		0FC2E8C32B4DCF6500B56FFF /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				0FC2E8C42B4DCF6500B56FFF /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		0FC2E8CD2B4DCF6600B56FFF /* CodingAssignmentTests */ = {
@@ -125,6 +116,36 @@
 				0FC2E8DA2B4DCF6600B56FFF /* CodingAssignmentUITestsLaunchTests.swift */,
 			);
 			path = CodingAssignmentUITests;
+			sourceTree = "<group>";
+		};
+		0FC2E8E72B4DCF9300B56FFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0FC2E8E82B4DCF9900B56FFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0FC2E8E92B4DCF9E00B56FFF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		0FC2E8EA2B4DD00900B56FFF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0FC2E8C12B4DCF6500B56FFF /* Assets.xcassets */,
+				0FC2E8C42B4DCF6500B56FFF /* Preview Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +278,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FC2E8C02B4DCF6300B56FFF /* ContentView.swift in Sources */,
 				0FC2E8BE2B4DCF6300B56FFF /* CodingAssignmentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CodingAssignment/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CodingAssignment/Resources\"";
 				DEVELOPMENT_TEAM = P6ZQ83429Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -450,7 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CodingAssignment/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CodingAssignment/Resources\"";
 				DEVELOPMENT_TEAM = P6ZQ83429Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
