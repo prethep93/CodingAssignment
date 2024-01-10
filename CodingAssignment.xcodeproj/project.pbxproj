@@ -62,6 +62,7 @@
 		0FC2E8FF2B4DE54500B56FFF /* RegistrationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModelTests.swift; sourceTree = "<group>"; };
 		0FC2E9012B4DE84200B56FFF /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		0FC2E9032B4DE8D000B56FFF /* AdaptiveRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptiveRow.swift; sourceTree = "<group>"; };
+		0FC2E90B2B4EE0A400B56FFF /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +93,7 @@
 		0FC2E8B12B4DCF6300B56FFF = {
 			isa = PBXGroup;
 			children = (
+				0FC2E90B2B4EE0A400B56FFF /* Readme.md */,
 				0FC2E8BC2B4DCF6300B56FFF /* CodingAssignment */,
 				0FC2E8CD2B4DCF6600B56FFF /* CodingAssignmentTests */,
 				0FC2E8D72B4DCF6600B56FFF /* CodingAssignmentUITests */,
